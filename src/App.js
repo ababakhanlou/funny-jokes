@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "./components/Button/Button";
-import NavBar from "./components/NavBar/NavBar";
-import Card from "./components/Card/Card";
+import { Button, Card, NavBar } from "./components";
 import "./App.css";
 
 function App() {
@@ -16,8 +14,8 @@ function App() {
       </div>
 
       <div className="App-jokeButton">
-        <Button butName="Like <3" />
-        <Button butName="NEXT>>>>>" />
+        <Button name="Like <3" />
+        <Button name="NEXT>>>>>" />
       </div>
     </div>
   );

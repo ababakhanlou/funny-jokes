@@ -3,7 +3,7 @@ import "./Button.css";
 
 class Button extends React.Component {
   render() {
-    return <button>{this.props.butName}</button>;
+    return <button>{this.props.name}</button>;
   }
 }
 

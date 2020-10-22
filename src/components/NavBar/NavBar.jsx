@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../Button/Button";
 import "./NavBar.css";
 
 class NavBar extends React.Component {
