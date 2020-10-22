@@ -1,3 +1,14 @@
 .App {
   text-align: center;
 }
+
+.App-navbar {
+}
+
+.App-card {
+  display: flex;
+  justify-content: center;
+}
+
+.App-jokeButton {
+}
