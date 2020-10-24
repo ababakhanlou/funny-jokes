@@ -1,22 +1,18 @@
 import React from "react";
 import { Button, Card, NavBar } from "./components";
+import getJoke from "./api/joke";
 import "./App.css";
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { theJoke: "" };
+    this.state = { joke: "" };
+    this.getNewJoke = this.getNewJoke.bind(this);
   }
 
   async getNewJoke() {
-    const jokeData = await fetch("https://icanhazdadjoke.com/", {
-      headers: {
-        Accept: "application/json",
-      },
-    });
-    const theJoke = await jokeData.json();
-    this.setState({ theJoke: theJoke.joke });
-    //console.log(theJoke.joke);
+    const joke = await getJoke();
+    this.setState({ joke });
   }
 
   async componentDidMount() {
@@ -31,12 +27,12 @@ class App extends React.Component {
         </div>
 
         <div className="App-card">
-          <Card joke={this.state.theJoke} />
+          <Card joke={this.state.joke} />
         </div>
 
         <div className="App-jokeButton">
           <Button name="Like <3" />
-          <Button action={() => this.getNewJoke()} name="NEXT>>>>>" />
+          <Button action={this.getNewJoke} name="NEXT>>>>>" />
         </div>
       </div>
     );
