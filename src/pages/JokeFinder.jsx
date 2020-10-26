@@ -7,6 +7,7 @@ class JokeFinder extends React.Component {
     super();
     this.state = { joke: "" };
     this.getNewJoke = this.getNewJoke.bind(this);
+    this.saveJoke = this.saveJoke.bind(this);
   }
 
   async getNewJoke() {
@@ -18,6 +19,17 @@ class JokeFinder extends React.Component {
     this.getNewJoke();
   }
 
+  saveJoke() {
+    const savedJokes = localStorage.getItem("jokes");
+    if (savedJokes?.includes(this.state.joke)) {
+      return;
+    }
+
+    let jokes = !savedJokes ? "" : savedJokes;
+    jokes = jokes + `${this.state.joke}<#>`;
+    localStorage.setItem("jokes", jokes.toString());
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +38,7 @@ class JokeFinder extends React.Component {
         </div>
 
         <div>
-          <Button name="Like <3" />
+          <Button action={this.saveJoke} name="Like <3" />
           <Button action={this.getNewJoke} name="NEXT>>>>>" />
         </div>
       </div>
