@@ -4,3 +4,15 @@
   padding: 18px;
   background-color: lightslategray;
 }
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.NavBar nav ul li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 20px;
+}
