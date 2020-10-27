@@ -6,6 +6,7 @@ class Card extends React.Component {
     return (
       <div className="Card">
         <p>{this.props.joke}</p>
+        {!!this.props.button && <button onClick={this.props.action}>X</button>}
       </div>
     );
   }

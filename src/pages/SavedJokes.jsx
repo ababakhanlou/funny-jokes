@@ -7,16 +7,29 @@ class SavedJokes extends React.Component {
     if (!retrievedJokes) {
       return [];
     }
-    const jokes = retrievedJokes.split("<#>").filter((joke) => !!joke);
-    return jokes;
+
+    return retrievedJokes.split("<#>").filter((joke) => !!joke);
+  }
+
+  deleteJoke(jokes, idx) {
+    jokes.splice(idx, 1);
+    localStorage.setItem("jokes", jokes.join("<#>"));
+    window.location.reload();
   }
 
   render() {
     const jokes = this.retrieveJokes();
     return (
       <div>
+        {!jokes.length && <p>We have no jokes to serve you</p>}
+
         {jokes.map((joke, idx) => (
-          <Card key={idx} joke={joke} />
+          <Card
+            key={idx}
+            joke={joke}
+            button
+            action={() => this.deleteJoke(jokes, idx)}
+          />
         ))}
       </div>
     );

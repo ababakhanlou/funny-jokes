@@ -8,3 +8,8 @@
   align-items: center;
   margin: 5px;
 }
+
+.Card button {
+  align-self: start;
+  background-color: red;
+}
