@@ -27,7 +27,7 @@ class JokeFinder extends React.Component {
 
     let jokes = !savedJokes ? "" : savedJokes;
     jokes = jokes + `${this.state.joke}<#>`;
-    localStorage.setItem("jokes", jokes.toString());
+    localStorage.setItem("jokes", jokes);
   }
 
   render() {
