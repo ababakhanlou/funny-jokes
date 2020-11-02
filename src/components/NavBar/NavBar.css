@@ -1,8 +1,10 @@
 .App-navbar {
   vertical-align: top;
   text-align: left;
-  padding: 18px;
-  background-color: lightslategray;
+  height: 90px;
+  padding: 0 15px;
+  background-color: #d6bc88;
+  font-family: "Work Sans", sans-serif;
 }
 
 .NavBar {
@@ -15,4 +17,15 @@
   list-style-type: none;
   display: inline;
   padding-left: 20px;
+  text-decoration: none;
+}
+
+.NavBar nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 701;
+}
+
+.NavBar nav ul li a:hover {
+  color: red;
 }

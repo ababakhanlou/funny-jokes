@@ -2,14 +2,31 @@
   height: 200px;
   width: 350px;
   padding: 18px;
-  background-color: red;
+  background-color: #efe2c8;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5px;
+  border-radius: 25px;
+  font-weight: 700;
 }
 
 .Card button {
   align-self: start;
-  background-color: red;
+  justify-content: right;
+  background-color: #d6bc88;
+  border-radius: 50px;
+  border: 0;
+  height: 25px;
+  width: 25px;
+  font-weight: 800;
+}
+
+.Card button:hover {
+  color: red;
+  outline: none;
+}
+
+.Card p {
+  flex-grow: 4;
 }

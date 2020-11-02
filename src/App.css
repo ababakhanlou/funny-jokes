@@ -1,8 +1,10 @@
 .App {
   text-align: center;
+  font-family: "Work Sans", sans-serif;
 }
 
 .App-navbar {
+  margin-bottom: 55px;
 }
 
 .App-card {
@@ -10,5 +12,7 @@
   justify-content: center;
 }
 
-.App-jokeButton {
+.App-savedJokes {
+  display: flex;
+  justify-content: center;
 }
