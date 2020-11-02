@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-navbar"
+  >
+    <div
+      className="NavBar"
+    >
+      <h1>
+        Dard JOKE!!!
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/saved-jokes"
+              onClick={[Function]}
+            >
+              Saved Jokes
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div
+    className="App-card"
+  >
+    <div>
+      <div>
+        <div
+          className="Card"
+        >
+          <p>
+            
+          </p>
+        </div>
+      </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Like &lt;3
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          NEXT&gt;&gt;&gt;&gt;&gt;
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
