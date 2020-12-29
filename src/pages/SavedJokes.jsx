@@ -20,7 +20,7 @@ class SavedJokes extends React.Component {
   render() {
     const jokes = this.retrieveJokes();
     return (
-      <div>
+      <div className="App-jokeList">
         {!jokes.length && <p>We have no jokes to serve you</p>}
 
         {jokes.map((joke, idx) => (
