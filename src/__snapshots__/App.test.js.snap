@@ -11,13 +11,13 @@ exports[`App render correctly 1`] = `
       className="NavBar"
     >
       <h1>
-        Dard JOKE!!!
+        !¡!Funny JOKES!¡!
       </h1>
       <nav>
         <ul>
           <li>
             <a
-              href="/"
+              href="#/"
               onClick={[Function]}
             >
               Home
@@ -25,7 +25,7 @@ exports[`App render correctly 1`] = `
           </li>
           <li>
             <a
-              href="/saved-jokes"
+              href="#/saved-jokes"
               onClick={[Function]}
             >
               Saved Jokes
@@ -50,11 +50,13 @@ exports[`App render correctly 1`] = `
       </div>
       <div>
         <button
+          className="Button"
           onClick={[Function]}
         >
           Like &lt;3
         </button>
         <button
+          className="Button"
           onClick={[Function]}
         >
           NEXT&gt;&gt;&gt;&gt;&gt;

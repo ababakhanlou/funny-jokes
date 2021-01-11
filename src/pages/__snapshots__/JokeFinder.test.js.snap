@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JokeFinder should render correctly 1`] = `
+"<div>
+  <div>
+    <Card joke=\\"Joke!\\" />
+  </div>
+  <div>
+    <Button action={[Function: bound saveJoke]} name=\\"Like <3\\" />
+    <Button action={[Function: bound getNewJoke]} name=\\"NEXT>>>>>\\" />
+  </div>
+</div>"
+`;

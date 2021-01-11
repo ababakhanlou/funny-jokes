@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedJokes should render correctly with list of jokes 1`] = `
+"<div className=\\"App-jokeList\\">
+  <Card joke=\\"A Joke 1\\" button={true} action={[Function: action]} />
+  <Card joke=\\"A Joke 2\\" button={true} action={[Function: action]} />
+</div>"
+`;
+
+exports[`SavedJokes should render correctly with no jokes 1`] = `
+"<div className=\\"App-jokeList\\">
+  <p>
+    We have no jokes to serve you
+  </p>
+</div>"
+`;

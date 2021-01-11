@@ -1,37 +1,27 @@
+import getJoke from "./joke";
+
 describe("getJoke", () => {
-  let shouldFailAtFetch = false;
-  let shouldFailAtJson = false;
-  global.fetch = jest.fn(() =>
-    shouldFailAtFetch
-      ? Promise.reject(new Error("bad joke in fetch"))
-      : shouldFailAtJson
+  let shouldFail = false;
+  jest.spyOn(global, "fetch").mockImplementation(() =>
+    !shouldFail
       ? Promise.resolve({
-          json: () => Promise.reject({ joke: "bad joke in json" }),
+          json: () => Promise.resolve({ joke: "This is a joke" }),
         })
-      : Promise.resolve({
-          json: () => Promise.resolve({ joke: "good joke" }),
-        })
+      : Promise.reject("")
   );
 
   beforeEach(() => {
-    shouldFailAtFetch = false;
-    shouldFailAtJson = false;
+    shouldFail = false;
   });
-  it("should return empty string if it fails at fetch", async () => {
-    shouldFailAtFetch = true;
-    const getJoke = require("./joke").default;
+
+  it("should return a joke when all is ok", async () => {
+    const result = await getJoke();
+    expect(result).toBe("This is a joke");
+  });
+
+  it("should return empty string when no joke is returned", async () => {
+    shouldFail = true;
     const result = await getJoke();
     expect(result).toBe("");
-  });
-  it("should return empty string if it fails at json", async () => {
-    shouldFailAtJson = true;
-    const getJoke = require("./joke").default;
-    const result = await getJoke();
-    expect(result).toBe("");
-  });
-  it("should return a joke", async () => {
-    const getJoke = require("./joke").default;
-    const result = await getJoke();
-    expect(result).toBe("good joke");
   });
 });
