@@ -1,1 +1,1 @@
-This is the Dard Jokes app.
+This is the Funny Jokes app.
